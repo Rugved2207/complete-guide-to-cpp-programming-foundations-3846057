@@ -8,7 +8,9 @@
 int add_int(float a, double b, long double c){
     int result = 0;
 
-    // Write your code here
+    result = (int)a + (int)b + (int)c;
+    
+    std::cout << (int)a + (int)b + (int)c << std::endl; 
     
     return result;
 }
