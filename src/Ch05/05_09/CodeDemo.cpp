@@ -15,7 +15,14 @@ struct Resource{
 double CalculateTotalCost(std::vector<Resource> resources){
     double result = 0.0;
     
-    // Write your code here
+    for(auto x : resources){
+        double cost_with_tax = x.baseCost;
+        if (x.type == 'B')
+            cost_with_tax += 0.05*x.baseCost;
+        else if (x.type == 'L')
+            result += 0.15*x.baseCost;
+        result += cost_with_tax;
+    }
     
     return result;
 }
